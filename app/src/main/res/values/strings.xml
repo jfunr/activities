@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">EjemploContactos</string>
+    <string name="confirmar">Confirmar Datos</string>
+    <string name="nombre">Nombre Completo:</string>
+    <string name="fecha_nacimiento">Fecha Nacimiento:</string>
+    <string name="telefono">Telefono:</string>
+    <string name="email">E-mail:</string>
+    <string name="descripcion">Descripcion:</string>
+
+    <string name="name">Nombre</string>
+    <string name="date">1999-07-16</string>
+    <string name="telf">+1111111</string>
+    <string name="mail">test@test.com</string>
+    <string name="info">la app</string>
+
+</resources>
