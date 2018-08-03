@@ -13,11 +13,11 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     public Button mBtLaunchActivity;
-    EditText name;
-    EditText date;
-    EditText telf;
-    EditText mail;
-    EditText info;
+    EditText nameM;
+    EditText dateM;
+    EditText telfM;
+    EditText mailM;
+    EditText infoM;
 
 
     @Override
@@ -25,7 +25,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        name = findViewById(R.id.name);
+        nameM = (EditText) findViewById(R.id.maname);
+        //nameM = (EditText) findViewById(R.id.maname);
+        telfM = (EditText) findViewById(R.id.matelf);
+        mailM = (EditText) findViewById(R.id.maemail);
+        infoM = (EditText) findViewById(R.id.madescripcion);
 
 
         mBtLaunchActivity = findViewById(R.id.bt_launch_activity);
@@ -33,14 +37,19 @@ public class MainActivity extends AppCompatActivity {
         mBtLaunchActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String name1 = nameM.getText().toString();
+
+                String telf1 = telfM.getText().toString();
+                String mail1 = mailM.getText().toString();
+                String info1 = infoM.getText().toString();
 
                 Intent intent = new Intent(MainActivity.this, DetalleContacto.class);
 
-                intent.putExtra("key", "name");
+                intent.putExtra("name1", name1);
                 intent.putExtra("key1", "date");
-                intent.putExtra("key2", "telf");
-                intent.putExtra("key3", "mail");
-                intent.putExtra("key4", "info");
+                intent.putExtra("telf1", telf1);
+                intent.putExtra("mail1", mail1);
+                intent.putExtra("info1", info1);
 
                 startActivity(intent);
             }
@@ -48,6 +57,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+
+
+
+
+
+
 
 
 
